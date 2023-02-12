@@ -7,7 +7,11 @@
 
 const int size = 32;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
+    if (argc < 3) {
+        printf("Not enough args:(\n");
+        exit(-1);
+    }
     int fd, fd2;
     char buffer[size + 1];
     ssize_t read_bytes;
